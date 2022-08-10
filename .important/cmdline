@@ -1,0 +1,1 @@
+root=UUID=1558de52-5440-43a9-b1eb-5b73c5fda0a9 rootflags=subvol=@ rw quiet loglevel=3 rd.systemd.show_status=auto rd.udev.log_level=3 bgrt_disable intel_pstate=hwp rootfstype=btrfs lsm=landlock,lockdown,yama,integrity,apparmor,bpf nvidia-drm.modeset=1 vt.global_cursor_default=0
