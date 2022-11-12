@@ -1,14 +1,14 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-export GPG_TTY=$(tty)
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+
 # Path to your oh-my-zsh installation.
-ZSH=/usr/share/oh-my-zsh/
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="fino"
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -41,13 +41,13 @@ ZSH_THEME="fino"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
- ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # You can also set it to another string to have that shown instead of the default red dots.
 # e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
 # Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
- COMPLETION_WAITING_DOTS="true"
+# COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -70,8 +70,10 @@ ZSH_THEME="fino"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-aliases-exa)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
+neofetch
+source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -95,20 +97,19 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-aliases-exa)
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-# Example aliases
+# Example aliasese
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-#alias l='exa'
-#alias la='exa -a'
-#alias ll='exa -lah'
-#alias ls='exa --grid --color=auto --icons'
+alias tb="toolbox enter"
+#alias code="flatpak run com.visualstudio.code"
+alias vi="nvim"
+alias vim="nvim"
 
-ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
-if [[ ! -d $ZSH_CACHE_DIR ]]; then
-  mkdir $ZSH_CACHE_DIR
-fi
+export PATH="/var/home/gh0st/.nimble/bin:/var/home/gh0st/.nimble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/sbin:/var/home/gh0st/.local/bin:/var/home/gh0st/bin:/var/home/gh0st/.local/bin"
 
-source $ZSH/oh-my-zsh.sh
+source "$HOME/.cargo/env"
 
-neofetch | lolcat
+clean-nohup
+export DOTNET_ROOT=$HOME/.dotnet
+export PATH=$PATH:$HOME/.dotnet:$HOME/.dotnet/
